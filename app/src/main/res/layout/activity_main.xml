@@ -2,9 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0D0D0D">
+    android:background="@color/app_background">
 
     <ImageView
         android:id="@+id/imageViewLogo"
@@ -33,7 +34,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/title_fit"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/app_text_primary"
             android:textSize="50sp" />
 
         <TextView
@@ -42,7 +43,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/title_pulse"
-            android:textColor="#3B82F6"
+            android:textColor="@color/primary"
             android:textSize="50sp" />
 
     </LinearLayout>
@@ -55,7 +56,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="132dp"
         android:layout_marginEnd="30dp"
-        android:backgroundTint="#2563EB"
+        android:backgroundTint="@color/primary"
         android:fontFamily="@font/roboto"
         android:padding="12dp"
         android:text="@string/login"
@@ -72,11 +73,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:backgroundTint="#1F2937"
+        android:backgroundTint="@color/app_surface_alt"
         android:fontFamily="@font/roboto"
         android:padding="12dp"
         android:text="@string/create_account"
-        android:textColor="@android:color/white"
+        android:textColor="@color/app_text_primary"
         android:textSize="18sp"
         app:cornerRadius="6dp"
         app:layout_constraintEnd_toEndOf="@id/buttonLogin"
@@ -90,7 +91,7 @@
         android:layout_marginTop="108dp"
         android:fontFamily="@font/roboto"
         android:text="@string/main_subtitle"
-        android:textColor="#9CA3AF"
+        android:textColor="@color/app_text_secondary"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
