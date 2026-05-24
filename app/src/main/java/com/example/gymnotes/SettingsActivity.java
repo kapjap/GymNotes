@@ -95,7 +95,6 @@ public class SettingsActivity extends AppCompatActivity {
         loadSettings();
         setupListeners();
         applyKeepScreenOn();
-        ThemeManager.applyThemeToActivity(this);
     }
 
     private void initViews() {
