@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@color/app_background"
     android:padding="20dp">
 
     <ImageView
@@ -16,7 +16,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/baseline_arrow_back_24"
-        android:tint="#5272B4"
+        android:tint="@color/app_accent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,11 +27,9 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
         android:src="@drawable/refresh"
-        android:tint="#5272B4"
+        android:tint="@color/app_accent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 
     <TextView
         android:id="@+id/titleNews"
@@ -40,7 +38,7 @@
         android:layout_marginTop="4dp"
         android:fontFamily="@font/roboto_bold"
         android:text="Новости спорта"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/app_text_primary"
         android:textSize="32sp"
         app:layout_constraintTop_toBottomOf="@id/buttonBack"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,8 +53,8 @@
         android:hint="Найти новость"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#8E97AA"
+        android:textColor="@color/app_text_primary"
+        android:textColorHint="@color/app_text_secondary"
         app:layout_constraintTop_toBottomOf="@id/titleNews"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
