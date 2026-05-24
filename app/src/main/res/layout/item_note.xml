@@ -5,8 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="12dp"
     card_view:cardCornerRadius="16dp"
-    card_view:cardElevation="6dp"
-    card_view:cardBackgroundColor="#1E1E1E">
+    card_view:cardElevation="3dp"
+    card_view:cardBackgroundColor="@color/app_surface">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Title"
-            android:textColor="@color/white"
+            android:textColor="@color/app_text_primary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -29,25 +29,23 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Some note content here..."
-            android:textColor="@color/white"
+            android:textColor="@color/app_text_primary"
             android:textSize="14sp" />
 
-        <!-- Блок с кнопками -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
             android:gravity="end"
-            android:layout_marginTop="8dp">
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/btnEdit"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:background="@android:color/transparent"
-                android:contentDescription="Edit"
                 android:src="@drawable/baseline_edit_24"
-                />
+                android:tint="@color/app_accent" />
 
             <ImageButton
                 android:id="@+id/btnDelete"
@@ -55,8 +53,8 @@
                 android:layout_height="24dp"
                 android:layout_marginStart="8dp"
                 android:background="@android:color/transparent"
-                android:contentDescription="Delete"
-                android:src="@drawable/baseline_delete_24" />
+                android:src="@drawable/baseline_delete_24"
+                android:tint="@color/app_accent" />
         </LinearLayout>
 
     </LinearLayout>
