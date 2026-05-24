@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@color/app_background"
     android:paddingStart="20dp"
     android:paddingTop="24dp"
     android:paddingEnd="20dp"
@@ -24,7 +24,7 @@
         android:focusable="true"
         android:padding="8dp"
         android:src="@drawable/baseline_arrow_back_24"
-        android:tint="#D6E4FF"
+        android:tint="@color/app_accent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,7 +36,7 @@
         android:layout_marginTop="52dp"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/welcome_back"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/app_text_primary"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +49,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto"
         android:text="@string/home_subtitle"
-        android:textColor="#8E97AA"
+        android:textColor="@color/app_text_secondary"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/textWelcome"
         app:layout_constraintTop_toBottomOf="@id/textWelcome" />
@@ -78,14 +78,14 @@
             android:layout_height="25dp"
             android:contentDescription="@string/profile"
             android:src="@drawable/ic_profile_person"
-            android:tint="#AFCBFF" />
+            android:tint="@color/app_accent" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
             android:text="@string/profile"
-            android:textColor="#AFCBFF"
+            android:textColor="@color/app_accent"
             android:textSize="15sp" />
     </LinearLayout>
 
@@ -105,14 +105,14 @@
             android:id="@+id/imageWorkoutBanner"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:alpha="0.50"
+            android:alpha="0.25"
             android:scaleType="centerCrop"
             android:src="@drawable/banner_fitpulsee" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#66000000" />
+            android:background="#22000000" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -140,7 +140,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
                     android:text="@string/workouts_upper"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/app_text_primary"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -151,7 +151,7 @@
                     android:layout_marginTop="6dp"
                     android:fontFamily="@font/roboto"
                     android:text="@string/start_workout"
-                    android:textColor="#D6DEEF"
+                    android:textColor="@color/app_text_secondary"
                     android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
@@ -187,7 +187,7 @@
             android:layout_marginTop="24dp"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/notes"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/app_text_primary"
             android:textSize="17sp"
             android:textStyle="bold" />
 
@@ -198,7 +198,7 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/roboto"
             android:text="@string/notes_subtitle"
-            android:textColor="#8E97AA"
+            android:textColor="@color/app_text_secondary"
             android:textSize="12sp" />
     </LinearLayout>
 
@@ -232,7 +232,7 @@
             android:layout_marginTop="24dp"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/news"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/app_text_primary"
             android:textSize="17sp"
             android:textStyle="bold" />
 
@@ -243,7 +243,7 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/roboto"
             android:text="@string/fitness_news"
-            android:textColor="#8E97AA"
+            android:textColor="@color/app_text_secondary"
             android:textSize="12sp" />
     </LinearLayout>
 
@@ -269,7 +269,7 @@
             android:layout_height="30dp"
             android:contentDescription="@string/progress"
             android:src="@drawable/progress_icon"
-            android:tint="#AFCBFF" />
+            android:tint="@color/app_accent" />
 
         <TextView
             android:id="@+id/textProgress"
@@ -278,7 +278,7 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/progress"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/app_text_primary"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -289,7 +289,7 @@
             android:layout_marginTop="6dp"
             android:fontFamily="@font/roboto"
             android:text="@string/progress_subtitle"
-            android:textColor="#8E97AA"
+            android:textColor="@color/app_text_secondary"
             android:textSize="10sp" />
     </LinearLayout>
 
@@ -325,7 +325,7 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/roboto_bold"
             android:text="@string/settings"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/app_text_primary"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -336,7 +336,7 @@
             android:layout_marginTop="6dp"
             android:fontFamily="@font/roboto"
             android:text="@string/settings_subtitle"
-            android:textColor="#8E97AA"
+            android:textColor="@color/app_text_secondary"
             android:textSize="10sp" />
     </LinearLayout>
 
@@ -357,14 +357,14 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:alpha="0.35"
+            android:alpha="0.20"
             android:scaleType="centerCrop"
             android:src="@drawable/banner_gymsnearby" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#66000000" />
+            android:background="#22000000" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -386,7 +386,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/gyms_nearby"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/app_text_primary"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -395,7 +395,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="@string/gyms_nearby_subtitle"
-                    android:textColor="#8E97AA"
+                    android:textColor="@color/app_text_secondary"
                     android:textSize="13sp" />
             </LinearLayout>
         </LinearLayout>
