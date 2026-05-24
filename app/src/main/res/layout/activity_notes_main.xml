@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#050505"
+    android:background="@color/app_background"
     android:paddingStart="20dp"
     android:paddingTop="24dp"
     android:paddingEnd="20dp"
@@ -18,23 +18,24 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#1F2937"
+        android:backgroundTint="@color/app_icon_background"
         android:src="@drawable/baseline_arrow_back_24"
-        android:tint="#3B82F6"
+        android:tint="@color/app_accent"
         app:cornerRadius="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/titleText"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:fontFamily="@font/roboto_bold"
         android:text="Заметки спортсмена"
-        android:textColor="#FFFFFF"
-        android:textSize="32sp"
+        android:textColor="@color/app_text_primary"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@id/imageButton4"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/imageButton4"
         app:layout_constraintTop_toTopOf="@id/imageButton4" />
 
@@ -45,10 +46,10 @@
         android:layout_marginTop="28dp"
         android:clipToPadding="false"
         android:paddingBottom="12dp"
-        app:layout_constraintTop_toBottomOf="@id/imageButton4"
         app:layout_constraintBottom_toTopOf="@id/statsBlock"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageButton4"
         tools:listitem="@layout/item_note" />
 
     <LinearLayout
@@ -58,32 +59,32 @@
         android:layout_marginBottom="14dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@id/buttonAddNoteTop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="18dp"
                 android:layout_height="18dp"
+                android:layout_marginTop="8dp"
                 android:src="@drawable/baseline_bar_chart_24"
-                android:tint="#3B82F6"
-                android:layout_marginTop="8dp"/>
+                android:tint="@color/app_accent" />
 
             <TextView
                 android:id="@+id/textStatsCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/roboto_bold"
                 android:text="0 заметок"
-                android:textColor="#E5E7EB"
-                android:textSize="16sp"
-                android:layout_marginTop="8dp"/>
+                android:textColor="@color/app_text_primary"
+                android:textSize="16sp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -94,7 +95,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:backgroundTint="#2563EB"
+        android:backgroundTint="@color/primary"
         android:fontFamily="@font/roboto"
         android:padding="14dp"
         android:text="Добавить заметку"
@@ -102,9 +103,7 @@
         android:textSize="17sp"
         app:cornerRadius="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
