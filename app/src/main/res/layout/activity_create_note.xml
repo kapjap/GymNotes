@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".Create_Note">
+
+
+    <!-- Title Text -->
+
+    <!-- Title EditText -->
+
+
+    <!-- Date -->
+
+    <TextView
+        android:id="@+id/createNoteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Создание заметки"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:background="#222222"
+        android:fontFamily="@font/roboto_light"
+        android:hint="Название"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createNoteTitle" />
+
+    <TextView
+        android:id="@+id/noteDate"
+        android:layout_width="114dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_light"
+        android:text="4/18/25"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/titleEditText"
+        app:layout_constraintTop_toBottomOf="@id/titleEditText" />
+
+    <!-- Note EditText -->
+    <EditText
+        android:id="@+id/noteEditText"
+        android:layout_width="353dp"
+        android:layout_height="401dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="#222222"
+        android:fontFamily="@font/roboto"
+        android:gravity="top"
+        android:hint="Введите текст заметки"
+        android:inputType="textMultiLine"
+        android:maxLines="15"
+        android:minLines="8"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/saveNoteButton"
+        app:layout_constraintEnd_toEndOf="@id/titleEditText"
+        app:layout_constraintStart_toStartOf="@id/titleEditText"
+        app:layout_constraintTop_toBottomOf="@id/noteDate" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/saveNoteButton"
+        style="@style/Widget.Material3.Button"
+        app:cornerRadius="6dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#2563EB"
+        android:fontFamily="@font/roboto"
+        android:padding="12dp"
+        android:text="Сохранить"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/titleEditText"
+        app:layout_constraintStart_toStartOf="@id/titleEditText" />
+
+    <EditText
+        android:id="@+id/editTextGroup"
+        android:layout_width="183dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="Тип тренировки"
+        android:inputType="text"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/noteEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleEditText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="126dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/titleEditText"
+        app:layout_constraintEnd_toStartOf="@+id/createNoteTitle"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/_73a050b45825" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

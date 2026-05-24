@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "377396369278",
+    "firebase_url": "https://gymnotes-64743-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "gymnotes-64743",
+    "storage_bucket": "gymnotes-64743.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377396369278:android:326b6ef5efb11d00cf852f",
+        "android_client_info": {
+          "package_name": "com.example.gymnotes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeAri4V8WfdRfIsCgfo5qKXKeGxUN3uuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

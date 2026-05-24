@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">ФитПульс</string>
+
+    <string name="title_fit">Фит</string>
+    <string name="title_pulse">Пульс</string>
+
+    <string name="main_subtitle">Стань лучшей версией себя</string>
+
+    <string name="login">Войти</string>
+    <string name="create_account">Создать аккаунт</string>
+
+    <string name="login_title">Начни свой путь</string>
+    <string name="login_subtitle">Войди в ФитПульс и продолжай двигаться вперёд 💪</string>
+
+    <string name="email">Эл. почта</string>
+    <string name="password">Пароль</string>
+
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="no_account_sign_up">Нет аккаунта? Зарегистрируйтесь</string>
+
+    <string name="reset_link_sent">Ссылка для сброса пароля успешно отправлена</string>
+    <string name="logout">Выйти</string>
+    <string name="back">← Назад</string>
+    <string name="first_name">Имя</string>
+    <string name="last_name">Фамилия</string>
+    <string name="reset_password">Сброс пароля</string>
+
+    <string name="reset_subtitle">
+    Введите свою электронную почту, чтобы получить ссылку для сброса пароля
+</string>
+
+    <string name="send_reset_link">Отправить ссылку</string>
+    <string name="back_icon">Назад</string>
+
+    <string name="welcome_back">С возвращением!</string>
+    <string name="home_subtitle">Готов к новым достижениям?</string>
+
+    <string name="profile">Профиль</string>
+
+    <string name="workouts">Тренировки</string>
+    <string name="workouts_upper">ТРЕНИРОВКИ</string>
+    <string name="start_workout">Начни тренировку</string>
+
+    <string name="notes">Заметки</string>
+    <string name="notes_subtitle">Твои задачи и цели</string>
+
+    <string name="news">Новости</string>
+    <string name="fitness_news">Новости фитнеса</string>
+
+    <string name="shop">Магазин</string>
+    <string name="shop_subtitle">Спортивное питание</string>
+
+    <string name="settings">Настройки</string>
+    <string name="settings_subtitle">Настройки аккаунта</string>
+
+    <string name="gyms_nearby">Залы рядом</string>
+    <string name="gyms_nearby_subtitle">Найди зал поблизости</string>
+
+    <string name="buy">Купить</string>
+
+    <string name="product_weight_loss">Снижение веса</string>
+    <string name="product_strength_training">Силовые тренировки</string>
+    <string name="product_bodybuilding">Бодибилдинг</string>
+    <string name="product_home_workout">Домашние тренировки</string>
+    <string name="progress">Статистика</string>
+    <string name="progress_subtitle">Статистика и результаты</string>
+    <string name="category_nutrition">Категория: Питание</string>
+    <string name="category_fitness">Категория: Фитнес</string>
+    <string name="category_bodybuilding">Категория: Бодибилдинг</string>
+    <string name="category_home_training">Категория: Домашние тренировки</string>
+
+    <string name="description_weight_loss">Помогает контролировать вес с помощью плана питания и подсчёта калорий.</string>
+    <string name="description_strength_training">Персональные программы для набора силы, мышц и повышения выносливости.</string>
+    <string name="description_bodybuilding">Продвинутая программа бодибилдинга со сплит-тренировками и контролем питания.</string>
+    <string name="description_home_workout">Упражнения без оборудования — отличный вариант для быстрых домашних тренировок.</string>
+
+    <string name="fit_shop">Магазин FitPulse</string>
+
+    <string name="price_1">1 799 ₽</string>
+    <string name="price_2">2 299 ₽</string>
+    <string name="price_3">2 799 ₽</string>
+    <string name="price_4">1 399 ₽</string>
+    <string name="product_title_placeholder">Название товара</string>
+    <string name="price_placeholder">Цена</string>
+    <string name="category_placeholder">Категория</string>
+    <string name="description_placeholder">Описание товара</string>
+
+    <string name="card_number">Номер карты</string>
+    <string name="confirm_purchase">Оплатить</string>
+</resources>

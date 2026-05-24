@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="16dp"
+    tools:context=".store_sports">
+
+    <TextView
+        android:id="@+id/titleText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/fit_shop"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card1"
+        android:layout_width="346dp"
+        android:layout_height="157dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/icon1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/product_weight_loss"
+            android:src="@drawable/free_icon_weighing_scale_1881341"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/product_weight_loss"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/icon1"
+            app:layout_constraintTop_toTopOf="@id/icon1" />
+
+        <TextView
+            android:id="@+id/price1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/price_1"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/title1"
+            app:layout_constraintTop_toBottomOf="@id/title1" />
+
+        <TextView
+            android:id="@+id/category1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/category_nutrition"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/title1"
+            app:layout_constraintTop_toBottomOf="@id/price1" />
+
+        <TextView
+            android:id="@+id/description1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/description_weight_loss"
+            android:textColor="#CCCCCC"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/button1"
+            app:layout_constraintStart_toStartOf="@id/title1"
+            app:layout_constraintTop_toBottomOf="@id/category1" />
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#5272B4"
+            android:fontFamily="@font/roboto"
+            android:text="@string/buy"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.495" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card2"
+        android:layout_width="345dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card1">
+
+        <ImageView
+            android:id="@+id/icon2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/product_strength_training"
+            android:src="@drawable/free_icon_bodybuilding_5459000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/product_strength_training"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/icon2"
+            app:layout_constraintTop_toTopOf="@id/icon2" />
+
+        <TextView
+            android:id="@+id/price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/price_2"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/title2"
+            app:layout_constraintTop_toBottomOf="@id/title2" />
+
+        <TextView
+            android:id="@+id/category2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/category_fitness"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/title2"
+            app:layout_constraintTop_toBottomOf="@id/price2" />
+
+        <TextView
+            android:id="@+id/description2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/description_strength_training"
+            android:textColor="#CCCCCC"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/button2"
+            app:layout_constraintStart_toStartOf="@id/title2"
+            app:layout_constraintTop_toBottomOf="@id/category2" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#5272B4"
+            android:fontFamily="@font/roboto"
+            android:text="@string/buy"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card3"
+        android:layout_width="337dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card2">
+
+        <ImageView
+            android:id="@+id/icon3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/product_bodybuilding"
+            android:src="@drawable/free_icon_dumbbell_7797193"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/product_bodybuilding"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/icon3"
+            app:layout_constraintTop_toTopOf="@id/icon3" />
+
+        <TextView
+            android:id="@+id/price3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/price_3"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/title3"
+            app:layout_constraintTop_toBottomOf="@id/title3" />
+
+        <TextView
+            android:id="@+id/category3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/category_bodybuilding"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/title3"
+            app:layout_constraintTop_toBottomOf="@id/price3" />
+
+        <TextView
+            android:id="@+id/description3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/description_bodybuilding"
+            android:textColor="#CCCCCC"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/button3"
+            app:layout_constraintStart_toStartOf="@id/title3"
+            app:layout_constraintTop_toBottomOf="@id/category3" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#5272B4"
+            android:fontFamily="@font/roboto"
+            android:text="@string/buy"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.495" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card4"
+        android:layout_width="335dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card3">
+
+        <ImageView
+            android:id="@+id/icon4"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/product_home_workout"
+            android:src="@drawable/icons8___96"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.262" />
+
+        <TextView
+            android:id="@+id/title4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/product_home_workout"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/icon4"
+            app:layout_constraintTop_toTopOf="@id/icon4" />
+
+        <TextView
+            android:id="@+id/price4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/price_4"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/title4"
+            app:layout_constraintTop_toBottomOf="@id/title4" />
+
+        <TextView
+            android:id="@+id/category4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/category_home_training"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/title4"
+            app:layout_constraintTop_toBottomOf="@id/price4" />
+
+        <TextView
+            android:id="@+id/description4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/description_home_workout"
+            android:textColor="#CCCCCC"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/button4"
+            app:layout_constraintStart_toStartOf="@id/title4"
+            app:layout_constraintTop_toBottomOf="@id/category4" />
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#5272B4"
+            android:fontFamily="@font/roboto"
+            android:text="@string/buy"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.252" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

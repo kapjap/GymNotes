@@ -1,0 +1,37 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardBackgroundColor="#131313"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <TextView
+            android:id="@+id/textExerciseName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Жим лёжа"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textExerciseInfo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 подхода × 10 повторений"
+            android:textColor="#8A8A8A"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

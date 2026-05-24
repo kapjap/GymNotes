@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GymNotes"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".GymsNearbyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProgressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WorkoutSessionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddExerciseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateWorkoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WorkoutsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".News"
+            android:exported="false" />
+        <activity
+            android:name=".HomeMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Workout"
+            android:exported="false" />
+        <activity
+            android:name=".Edit_Note"
+            android:exported="false" />
+        <activity
+            android:name=".activity_product_purchase"
+            android:exported="false" />
+        <activity
+            android:name=".store_sports"
+            android:exported="false" />
+        <activity
+            android:name=".Create_Note"
+            android:exported="false" />
+        <activity
+            android:name=".Reset_email"
+            android:exported="false" />
+        <activity
+            android:name=".NotesMain"
+            android:exported="false" />
+        <activity
+            android:name=".Sign_Up_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Log_in_Activity"
+            android:exported="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Yandex MapKit API KEY -->
+        <meta-data
+            android:name="com.yandex.maps.apikey"
+            android:value="a9aa08a8-98ea-4050-8671-0bbc66115483" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+    </application>
+
+</manifest>

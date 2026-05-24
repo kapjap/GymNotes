@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    tools:context=".WorkoutSessionActivity">
+
+    <ImageView
+        android:id="@+id/buttonBack"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:tint="#5272B4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textWorkoutTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:text="Спина + Бицепс"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/buttonBack"
+        app:layout_constraintEnd_toStartOf="@id/buttonPause"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/buttonBack" />
+
+    <ImageView
+        android:id="@+id/buttonPause"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/bg_pause_circle"
+        android:padding="18dp"
+        android:src="@drawable/baseline_pause_24"
+        android:tint="#5272B4"
+        app:layout_constraintBottom_toBottomOf="@id/textWorkoutTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textWorkoutTimer" />
+
+    <TextView
+        android:id="@+id/textWorkoutTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="Время тренировки"
+        android:textColor="#8F8F8F"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonBack" />
+
+    <TextView
+        android:id="@+id/textWorkoutTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="00:00"
+        android:textColor="#FFFFFF"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textWorkoutTimeLabel" />
+
+    <TextView
+        android:id="@+id/textExercisesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="Упражнения"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textWorkoutTimer" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerWorkoutExercises"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="14dp"
+        android:clipToPadding="false"
+        android:paddingBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@id/cardRest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textExercisesLabel" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardRest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        app:cardBackgroundColor="#131313"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="3dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonFinishWorkout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Отдых"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textRestTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="00:00"
+                android:textColor="#FFFFFF"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textRestTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="из 60 сек"
+                android:textColor="#8F8F8F"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/buttonStartRest"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_skip_rest"
+                android:gravity="center"
+                android:text="Начать отдых"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/buttonSkipRest"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_skip_rest"
+                android:gravity="center"
+                android:text="Пропустить отдых"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/buttonFinishWorkout"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_finish_workout"
+        android:gravity="center"
+        android:text="Завершить тренировку"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

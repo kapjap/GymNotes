@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    app:cardBackgroundColor="#131313"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <View
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_exercise_icon_placeholder" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textExerciseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Жим лёжа"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textExerciseInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="5 подходов × 10 повторений"
+                android:textColor="#A0A0A0"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/check1"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/bg_set_empty" />
+
+                <ImageView
+                    android:id="@+id/check2"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/bg_set_empty" />
+
+                <ImageView
+                    android:id="@+id/check3"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/bg_set_empty" />
+
+                <ImageView
+                    android:id="@+id/check4"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/bg_set_empty" />
+
+                <ImageView
+                    android:id="@+id/check5"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:src="@drawable/bg_set_empty" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
