@@ -152,6 +152,9 @@ public class ThemeManager {
         }
 
         int color = ((ColorDrawable) background).getColor();
+        if (Color.alpha(color) < 255) {
+            return;
+        }
 
         if (matches(color, DARK_BACKGROUND, DARK_BACKGROUND_2, DARK_BACKGROUND_3)) {
             view.setBackgroundColor(LIGHT_BACKGROUND);
