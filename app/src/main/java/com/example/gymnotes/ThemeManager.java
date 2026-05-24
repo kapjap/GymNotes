@@ -23,6 +23,9 @@ public class ThemeManager {
     private static final String KEY_THEME_MODE = "theme_mode";
     private static final String OLD_KEY_LIGHT_THEME = "light_theme";
 
+    private static final String TAG_KEEP_TEXT_COLOR = "keep_text_color";
+    private static final String TAG_KEEP_IMAGE = "keep_image";
+
     public static final String THEME_SYSTEM = "system";
     public static final String THEME_LIGHT = "light";
     public static final String THEME_DARK = "dark";
@@ -41,7 +44,6 @@ public class ThemeManager {
 
     private static final int LIGHT_BACKGROUND = Color.parseColor("#F4F7FB");
     private static final int LIGHT_SURFACE = Color.parseColor("#FFFFFF");
-    private static final int LIGHT_SURFACE_ALT = Color.parseColor("#EAF1FB");
     private static final int LIGHT_DIVIDER = Color.parseColor("#D9E2F2");
     private static final int LIGHT_PRIMARY_TEXT = Color.parseColor("#111827");
     private static final int LIGHT_SECONDARY_TEXT = Color.parseColor("#667085");
@@ -113,7 +115,7 @@ public class ThemeManager {
     }
 
     private static void applyLightThemeToView(View view) {
-        if (view == null) {
+        if (view == null || shouldKeepImage(view)) {
             return;
         }
 
@@ -161,6 +163,10 @@ public class ThemeManager {
     }
 
     private static void applyLightTextColor(TextView textView) {
+        if (shouldKeepTextColor(textView)) {
+            return;
+        }
+
         int color = normalizeColor(textView.getCurrentTextColor());
 
         if (isSameColor(color, Color.WHITE) || isVeryLight(color)) {
@@ -171,6 +177,10 @@ public class ThemeManager {
     }
 
     private static void applyLightIconTint(ImageView imageView) {
+        if (shouldKeepImage(imageView)) {
+            return;
+        }
+
         ColorStateList tintList = imageView.getImageTintList();
         if (tintList == null) {
             return;
@@ -182,6 +192,16 @@ public class ThemeManager {
         } else if (isSameColor(tint, ACCENT) || isSameColor(tint, ACCENT_BRIGHT)) {
             imageView.setImageTintList(ColorStateList.valueOf(ACCENT));
         }
+    }
+
+    private static boolean shouldKeepTextColor(View view) {
+        Object tag = view.getTag();
+        return tag != null && TAG_KEEP_TEXT_COLOR.equals(String.valueOf(tag));
+    }
+
+    private static boolean shouldKeepImage(View view) {
+        Object tag = view.getTag();
+        return tag != null && TAG_KEEP_IMAGE.equals(String.valueOf(tag));
     }
 
     private static boolean matches(int color, int... colors) {
