@@ -47,6 +47,7 @@ public class SettingsActivity extends AppCompatActivity {
     private Switch switchRestSound;
     private Switch switchVibration;
     private Switch switchKeepScreenOn;
+    private Switch switchLightTheme;
     private Switch switchLocation;
     private LinearLayout layoutRestDuration;
     private TextView textRestDurationValue;
@@ -83,6 +84,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ThemeManager.applySavedTheme(this);
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_settings);
@@ -93,6 +95,7 @@ public class SettingsActivity extends AppCompatActivity {
         loadSettings();
         setupListeners();
         applyKeepScreenOn();
+        ThemeManager.applyThemeToActivity(this);
     }
 
     private void initViews() {
@@ -101,6 +104,7 @@ public class SettingsActivity extends AppCompatActivity {
         switchRestSound = findViewById(R.id.switchRestSound);
         switchVibration = findViewById(R.id.switchVibration);
         switchKeepScreenOn = findViewById(R.id.switchKeepScreenOn);
+        switchLightTheme = findViewById(R.id.switchLightTheme);
         switchLocation = findViewById(R.id.switchLocation);
         layoutRestDuration = findViewById(R.id.layoutRestDuration);
         textRestDurationValue = findViewById(R.id.textRestDurationValue);
@@ -113,6 +117,19 @@ public class SettingsActivity extends AppCompatActivity {
         layoutRestDuration.setOnClickListener(v -> showRestDurationDialog());
 
         switchKeepScreenOn.setOnCheckedChangeListener((buttonView, isChecked) -> applyKeepScreenOn());
+
+        switchLightTheme.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (!buttonView.isPressed()) {
+                return;
+            }
+
+            ThemeManager.setLightThemeEnabled(this, isChecked);
+            Toast.makeText(
+                    this,
+                    isChecked ? "Светлая тема включена" : "Тёмная тема включена",
+                    Toast.LENGTH_SHORT
+            ).show();
+        });
 
         switchLocation.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (!buttonView.isPressed()) {
@@ -157,6 +174,7 @@ public class SettingsActivity extends AppCompatActivity {
         switchRestSound.setChecked(restSound);
         switchVibration.setChecked(vibration);
         switchKeepScreenOn.setChecked(keepScreenOn);
+        switchLightTheme.setChecked(ThemeManager.isLightThemeEnabled(this));
         switchLocation.setChecked(location && hasLocationPermission());
 
         updateRestDurationText();
