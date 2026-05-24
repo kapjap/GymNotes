@@ -122,10 +122,14 @@ public class SettingsActivity extends AppCompatActivity {
                 return;
             }
 
-            ThemeManager.setLightThemeEnabled(this, isChecked);
+            ThemeManager.setThemeMode(
+                    this,
+                    isChecked ? ThemeManager.THEME_SYSTEM : ThemeManager.THEME_DARK
+            );
+
             Toast.makeText(
                     this,
-                    isChecked ? "Светлая тема включена" : "Тёмная тема включена",
+                    isChecked ? "Тема приложения будет как на телефоне" : "Включена тёмная тема приложения",
                     Toast.LENGTH_SHORT
             ).show();
         });
@@ -173,7 +177,7 @@ public class SettingsActivity extends AppCompatActivity {
         switchRestSound.setChecked(restSound);
         switchVibration.setChecked(vibration);
         switchKeepScreenOn.setChecked(keepScreenOn);
-        switchLightTheme.setChecked(ThemeManager.isLightThemeEnabled(this));
+        switchLightTheme.setChecked(ThemeManager.THEME_SYSTEM.equals(ThemeManager.getThemeMode(this)));
         switchLocation.setChecked(location && hasLocationPermission());
 
         updateRestDurationText();
